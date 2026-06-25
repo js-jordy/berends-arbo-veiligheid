@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env files
+.env
+.env.local
+
+# Node (if added later)
+node_modules/
+
+# Keep empty asset folders tracked
+!assets/images/.gitkeep
+!assets/videos/.gitkeep

@@ -1,0 +1,53 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Layout container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header / Nav placeholder */
+header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main content */
+main {
+  padding: 2rem 1.5rem;
+}
+
+/* Footer placeholder */
+footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
