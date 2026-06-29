@@ -23,3 +23,5 @@ node_modules/
 # Keep empty asset folders tracked
 !assets/images/.gitkeep
 !assets/videos/.gitkeep
+
+assets/Website_Intake/

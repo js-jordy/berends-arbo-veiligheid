@@ -3,30 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Berends Arbo & Veiligheid BV</title>
+  <title>Berends Arbo &amp; Veiligheid BV</title>
+  <meta name="description" content="Pim Berends — veiligheidskundige en arbeidshygiënist. Berends Arbo &amp; Veiligheid B.V. helpt bedrijven met RI&amp;E's, blootstellingsonderzoeken, gevaarlijke stoffen, trainingen en veiligheidskundig advies." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="diensten.html">Diensten</a></li>
-        <li><a href="projecten.html">Projecten</a></li>
-        <li><a href="over-mij.html">Over mij</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand">Berends Arbo &amp; Veiligheid</a>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Menu openen"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href="index.html"     class="nav-link active" aria-current="page">Home</a></li>
+            <li><a href="diensten.html"  class="nav-link">Diensten</a></li>
+            <li><a href="projecten.html" class="nav-link">Projecten</a></li>
+            <li><a href="over-mij.html"  class="nav-link">Over mij</a></li>
+            <li><a href="contact.html"   class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <h1>Home</h1>
-    <p>Welkom bij Berends Arbo &amp; Veiligheid BV.</p>
+  <main>
+
+    <!-- ====================================================
+         1. Hero
+         ==================================================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <h1 class="hero__headline">Arbo, veiligheid en arbeidshygiëne helder in kaart gebracht.</h1>
+            <p class="hero__credential">Pim Berends | Veiligheidskundige &amp; arbeidshygiënist</p>
+            <p class="hero__sub">Vanuit Berends Arbo &amp; Veiligheid help ik industriële bedrijven en publieke organisaties om risico's rond veiligheid en gezondheid beter te begrijpen. Met RI&amp;E's, arbeidshygiënisch onderzoek, blootstellingsonderzoeken, trainingen en veiligheidskundig advies maak ik complexe vraagstukken begrijpelijk en toepasbaar.</p>
+            <div class="hero__actions">
+              <a href="contact.html" class="btn btn--primary">Neem contact op</a>
+              <a href="#ondersteuning" class="hero__link">Bekijk expertise</a>
+            </div>
+          </div>
+          <!-- Image slot — ready for a real photo.
+               To activate: add background-image: url(assets/images/...) to .hero__visual in style.css -->
+          <div class="hero__visual" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         2. Context
+         Text left (3fr) — pull insight right (2fr)
+         ==================================================== -->
+    <section class="section" id="context">
+      <div class="container">
+        <div class="split split--context">
+          <div class="split__main">
+            <h2 class="section__title">Veilig werken begint met weten waar de risico's zitten</h2>
+            <div class="section__body">
+              <p>Risico's zijn niet altijd direct zichtbaar. Denk aan blootstelling aan stoffen, stof, dampen, onveilige werksituaties of werkzaamheden die op papier goed geregeld lijken, maar op de werkvloer anders uitpakken.</p>
+              <p>Met gericht onderzoek en een praktische blik wordt duidelijk wat er speelt, wat prioriteit heeft en welke stappen nodig zijn.</p>
+            </div>
+          </div>
+          <aside class="split__aside">
+            <p class="pull-text">Daarom ligt de nadruk niet alleen op veiligheid in algemene zin, maar ook op gezondheidsrisico's die minder zichtbaar zijn.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         3. Arbeidshygiëne als specialisme
+         Image left (2fr) — specialist text right (3fr)
+         ==================================================== -->
+    <section class="section section--surface" id="arbeidshygiene">
+      <div class="container">
+        <div class="split split--specialist">
+          <div class="split__detail">
+            <div class="tech-frame">
+              <img
+                src="assets/images/arbeidshygiene-meting-industrie.png"
+                alt="Man voert metingen uit in een industriële werkomgeving"
+                class="tech-frame__img"
+              />
+            </div>
+          </div>
+          <div class="split__main">
+            <h2 class="section__title">Extra focus op arbeidshygiëne en blootstellingsrisico's</h2>
+            <div class="section__body">
+              <p>Een belangrijk onderdeel van mijn werk is arbeidshygiëne: het herkennen, beoordelen en beheersen van gezondheidsrisico's op de werkvloer. Denk aan het registreren en beoordelen van gevaarlijke stoffen, blootstellingsmetingen of onderzoek naar stof, dampen en andere omstandigheden die van invloed zijn op veilig en gezond werken.</p>
+              <p>Geen ingewikkeld rapport om in een la te leggen, maar advies waar je als organisatie mee verder kunt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         4. Onderzoek, advies en praktische ondersteuning
+         Intro left (2fr) — expertise overview right (3fr)
+         ==================================================== -->
+    <section class="section" id="ondersteuning">
+      <div class="container">
+        <div class="split split--expertise">
+          <div class="split__main">
+            <h2 class="section__title">Onderzoek, advies en praktische ondersteuning</h2>
+            <div class="section__body">
+              <p>De ene keer gaat het om een meting of rapportage. De andere keer om advies, training of tijdelijke ondersteuning bij een veiligheidsvraagstuk. De insteek blijft hetzelfde: achterhalen wat er speelt, kijken wat op locatie nodig is en terugkoppelen waar je als organisatie mee verder kunt. Daarbij combineer ik praktijkervaring met specialistische kennis, zodat de vervolgstappen concreet blijven.</p>
+            </div>
+          </div>
+          <ul class="expertise-list">
+            <li>
+              <span class="expertise-list__title">Advies bij arbo- en veiligheidsvraagstukken</span>
+              <span class="expertise-list__desc">Praktische ondersteuning bij vragen rond veiligheid, gezondheid en werksituaties.</span>
+            </li>
+            <li>
+              <span class="expertise-list__title">RI&amp;E's en risico-inventarisatie</span>
+              <span class="expertise-list__desc">Risico's op de werkvloer in kaart brengen en vertalen naar concrete verbeterpunten.</span>
+            </li>
+            <li>
+              <span class="expertise-list__title">Gevaarlijke stoffen registreren en beoordelen</span>
+              <span class="expertise-list__desc">Inzicht geven in stoffen, blootstelling en wat nodig is om veilig te werken.</span>
+            </li>
+            <li>
+              <span class="expertise-list__title">Blootstellingsonderzoeken na RI&amp;E of bij specifieke vragen</span>
+              <span class="expertise-list__desc">Gericht onderzoek wanneer gezondheidsrisico's minder direct zichtbaar zijn.</span>
+            </li>
+            <li>
+              <span class="expertise-list__title">Werkplekmetingen en rapportages</span>
+              <span class="expertise-list__desc">Metingen op locatie met een duidelijke terugkoppeling van de bevindingen.</span>
+            </li>
+            <li>
+              <span class="expertise-list__title">Trainingen, VCA en intern transport</span>
+              <span class="expertise-list__desc">Praktijkgerichte trainingen en instructies voor veilig werken.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         5. Final CTA
+         ==================================================== -->
+    <section class="section section--cta" id="contact-cta">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Een arbo- of veiligheidsvraagstuk bespreken?</h2>
+          <p>Heb je een vraag over RI&amp;E, blootstelling, gevaarlijke stoffen, trainingen of een ander veiligheidsvraagstuk? Neem gerust contact op om de situatie kort te bespreken.</p>
+          <div>
+            <a href="contact.html" class="btn btn--primary">Bespreek je vraagstuk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>Berends Arbo &amp; Veiligheid BV</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer__info">
+          <span class="footer__brand">Berends Arbo &amp; Veiligheid B.V.</span>
+          <span class="footer__person">Pim Berends | Veiligheidskundige &amp; arbeidshygiënist</span>
+          <div class="footer__contact">
+            <a href="mailto:pim@berendsarboenveiligheid.nl">pim@berendsarboenveiligheid.nl</a>
+            <a href="tel:+31629044884">06 2904 4884</a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footernavigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diensten.html">Diensten</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="over-mij.html">Over mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
