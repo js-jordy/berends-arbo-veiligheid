@@ -3,30 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diensten - Berends Arbo & Veiligheid BV</title>
+  <title>Diensten | Berends Arbo &amp; Veiligheid</title>
+  <meta name="description" content="Diensten van Berends Arbo &amp; Veiligheid: RI&amp;E, gevaarlijke stoffen, blootstellingsonderzoeken, werkplekmetingen, trainingen en veiligheidskundig advies." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="diensten.html">Diensten</a></li>
-        <li><a href="projecten.html">Projecten</a></li>
-        <li><a href="over-mij.html">Over mij</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand">Berends Arbo &amp; Veiligheid</a>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Menu openen"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href="index.html"     class="nav-link">Home</a></li>
+            <li><a href="diensten.html"  class="nav-link active" aria-current="page">Diensten</a></li>
+            <li><a href="projecten.html" class="nav-link">Projecten</a></li>
+            <li><a href="over-mij.html"  class="nav-link">Over mij</a></li>
+            <li><a href="contact.html"   class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <h1>Diensten</h1>
-    <p>Overzicht van onze diensten volgt hier.</p>
+  <main>
+
+    <!-- Page intro -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section__inner">
+          <h1 class="section__title">Diensten</h1>
+          <div class="section__body">
+            <p>Voor bedrijven en organisaties die grip willen krijgen op veiligheid, gezondheid en risico's op de werkvloer. Van RI&amp;E en gevaarlijke stoffen tot blootstellingsonderzoek, werkplekmetingen en trainingen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Ondersteuning bij arbo, veiligheid en arbeidshygiëne</h2>
+        <div class="service-list">
+
+          <div class="service-list__item">
+            <h3 class="service-list__title">Advies bij arbo- en veiligheidsvraagstukken</h3>
+            <p class="service-list__body">Wanneer er vragen spelen rond arbeidsomstandigheden, veiligheid of gezondheid op de werkvloer, help ik om de situatie scherp te krijgen. Geen standaardadvies, maar een praktische beoordeling van wat er speelt en welke vervolgstappen logisch zijn.</p>
+          </div>
+
+          <div class="service-list__item">
+            <h3 class="service-list__title">RI&amp;E's en risico-inventarisatie</h3>
+            <p class="service-list__body">Met een RI&amp;E worden risico's op de werkvloer systematisch in kaart gebracht. Ik kijk naar de situatie op locatie en vertaal bevindingen naar duidelijke verbeterpunten die passen bij de praktijk.</p>
+          </div>
+
+          <div class="service-list__item">
+            <h3 class="service-list__title">Gevaarlijke stoffen registreren en beoordelen</h3>
+            <p class="service-list__body">Bij werken met gevaarlijke stoffen is inzicht nodig in wat er aanwezig is, hoe ermee wordt gewerkt en welke blootstelling mogelijk is. Ik ondersteun bij registratie, beoordeling en praktische maatregelen.</p>
+          </div>
+
+          <div class="service-list__item">
+            <h3 class="service-list__title">Blootstellingsonderzoeken na RI&amp;E of bij specifieke vragen</h3>
+            <p class="service-list__body">Wanneer gezondheidsrisico's niet direct zichtbaar zijn, kan gericht blootstellingsonderzoek nodig zijn. Bijvoorbeeld bij stof, dampen of andere omstandigheden die invloed hebben op veilig en gezond werken.</p>
+          </div>
+
+          <div class="service-list__item">
+            <h3 class="service-list__title">Werkplekmetingen en rapportages</h3>
+            <p class="service-list__body">Metingen op locatie geven inzicht in de werkelijke situatie. De bevindingen worden helder teruggekoppeld, zodat duidelijk wordt wat de uitkomst betekent en wat ermee gedaan kan worden.</p>
+          </div>
+
+          <div class="service-list__item">
+            <h3 class="service-list__title">Trainingen, VCA en intern transport</h3>
+            <p class="service-list__body">Trainingen en instructies helpen medewerkers om veilig en bewust te werken. De inhoud wordt praktisch ingestoken, zodat deze aansluit bij de werkzaamheden en werkomgeving.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cta">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Een dienst of vraagstuk bespreken?</h2>
+          <p>Heb je een vraag over RI&amp;E, blootstelling, gevaarlijke stoffen, trainingen of een ander veiligheidsvraagstuk? Neem gerust contact op om de situatie kort te bespreken.</p>
+          <div>
+            <a href="contact.html" class="btn btn--primary">Bespreek je vraagstuk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>Berends Arbo &amp; Veiligheid BV</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer__info">
+          <span class="footer__brand">Berends Arbo &amp; Veiligheid B.V.</span>
+          <span class="footer__person">Pim Berends | Veiligheidskundige &amp; arbeidshygiënist</span>
+          <div class="footer__contact">
+            <a href="mailto:pim@berendsarboenveiligheid.nl">pim@berendsarboenveiligheid.nl</a>
+            <a href="tel:+31629044884">06 2904 4884</a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footernavigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diensten.html">Diensten</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="over-mij.html">Over mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

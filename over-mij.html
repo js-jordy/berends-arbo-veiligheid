@@ -3,30 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Over mij - Berends Arbo & Veiligheid BV</title>
+  <title>Over mij | Berends Arbo &amp; Veiligheid</title>
+  <meta name="description" content="Maak kennis met Pim Berends, veiligheidskundige en arbeidshygiënist achter Berends Arbo &amp; Veiligheid." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="diensten.html">Diensten</a></li>
-        <li><a href="projecten.html">Projecten</a></li>
-        <li><a href="over-mij.html">Over mij</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand">Berends Arbo &amp; Veiligheid</a>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Menu openen"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href="index.html"     class="nav-link">Home</a></li>
+            <li><a href="diensten.html"  class="nav-link">Diensten</a></li>
+            <li><a href="projecten.html" class="nav-link">Projecten</a></li>
+            <li><a href="over-mij.html"  class="nav-link active" aria-current="page">Over mij</a></li>
+            <li><a href="contact.html"   class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <h1>Over mij</h1>
-    <p>Informatie over Berends Arbo &amp; Veiligheid BV volgt hier.</p>
+  <main>
+
+    <!-- Page intro -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section__inner">
+          <h1 class="section__title">Over mij</h1>
+          <p class="page-credential">Pim Berends | Veiligheidskundige &amp; arbeidshygiënist</p>
+          <div class="section__body">
+            <p>Ik ben Pim Berends, veiligheidskundige en arbeidshygiënist. Vanuit Berends Arbo &amp; Veiligheid help ik bedrijven en publieke organisaties om risico's op de werkvloer helder in kaart te brengen en praktisch vervolg te geven aan wat uit onderzoek, metingen of advies naar voren komt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background + aside -->
+    <section class="section">
+      <div class="container">
+        <div class="split split--context">
+          <div class="split__main">
+            <h2 class="section__title">Praktisch kijken naar veiligheid en gezondheid</h2>
+            <div class="section__body">
+              <p>In mijn werk kijk ik niet alleen naar regels en documenten, maar vooral naar wat er op locatie gebeurt. Hoe wordt er gewerkt, waar ontstaan risico's en welke maatregelen zijn praktisch haalbaar?</p>
+              <p>Die combinatie van praktijkervaring en specialistische kennis is belangrijk. Zeker bij arbeidshygiëne en blootstellingsrisico's zijn risico's niet altijd direct zichtbaar, terwijl ze wel invloed kunnen hebben op veilig en gezond werken.</p>
+              <p>Mijn doel is om complexe vraagstukken begrijpelijk te maken. Niet met onnodig ingewikkelde rapporten, maar met duidelijke bevindingen en vervolgstappen waar een organisatie mee verder kan.</p>
+              <p>Ik vind het belangrijk dat advies niet alleen klopt op papier, maar ook werkt voor de mensen die er dagelijks mee te maken hebben.</p>
+            </div>
+          </div>
+          <div>
+            <ul class="aside-list" aria-label="Waar ik op let">
+              <span class="aside-list__title">Waar ik op let</span>
+              <li>Wat gebeurt er echt op de werkvloer?</li>
+              <li>Welke risico's zijn zichtbaar of minder zichtbaar?</li>
+              <li>Wat is nodig, haalbaar en uitlegbaar?</li>
+              <li>Welke vervolgstappen helpen de organisatie verder?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working style -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Werken vanuit de praktijk</h2>
+          <div class="section__body">
+            <p>Een goed advies begint met begrijpen wat er op locatie speelt. Daarom start ik bij de werksituatie zelf: kijken, vragen stellen, beoordelen en waar nodig meten. Zo ontstaat een beeld dat niet alleen klopt op papier, maar ook past bij de praktijk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cta">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Kennismaken of een vraagstuk bespreken?</h2>
+          <p>Heb je een vraag over arbo, veiligheid of arbeidshygiëne? Neem gerust contact op om kort te bespreken wat er speelt.</p>
+          <div>
+            <a href="contact.html" class="btn btn--primary">Neem contact op</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>Berends Arbo &amp; Veiligheid BV</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer__info">
+          <span class="footer__brand">Berends Arbo &amp; Veiligheid B.V.</span>
+          <span class="footer__person">Pim Berends | Veiligheidskundige &amp; arbeidshygiënist</span>
+          <div class="footer__contact">
+            <a href="mailto:pim@berendsarboenveiligheid.nl">pim@berendsarboenveiligheid.nl</a>
+            <a href="tel:+31629044884">06 2904 4884</a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footernavigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diensten.html">Diensten</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="over-mij.html">Over mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

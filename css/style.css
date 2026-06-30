@@ -679,6 +679,124 @@ a:hover {
 
 .footer__nav a:hover { color: rgba(255, 255, 255, 0.78); }
 
+/* ============================================================
+   Inner page utilities
+   Shared across diensten, projecten, over-mij and contact.
+   ============================================================ */
+
+/* Credential line below inner page h1 (over-mij.html) */
+.page-credential {
+  font-size: var(--text-sm);
+  color: var(--c-ink-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ------------------------------------------------------------
+   Service / situation list — diensten.html, projecten.html
+   ------------------------------------------------------------ */
+.service-list {
+  margin-top: var(--sp-lg);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.service-list__item {
+  padding: var(--sp-md) 0;
+  border-top: 1px solid var(--c-border);
+}
+
+.service-list__title {
+  font-size: var(--text-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--c-ink);
+  line-height: var(--lh-heading);
+  margin-bottom: var(--sp-xs);
+}
+
+.service-list__body {
+  color: var(--c-ink-body);
+  line-height: var(--lh-base);
+  max-width: 600px;
+}
+
+/* ------------------------------------------------------------
+   Aside supporting list — over-mij.html
+   ------------------------------------------------------------ */
+.aside-list {
+  border-top: 1px solid var(--c-border);
+}
+
+.aside-list__title {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--c-ink-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: var(--sp-sm) 0 var(--sp-xs);
+}
+
+.aside-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--c-border);
+  font-size: var(--text-sm);
+  color: var(--c-ink-body);
+  line-height: 1.55;
+}
+
+/* ------------------------------------------------------------
+   Contact details block — contact.html
+   ------------------------------------------------------------ */
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+
+.contact-block__name {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--c-ink);
+  line-height: var(--lh-heading);
+}
+
+.contact-block__role {
+  font-size: var(--text-sm);
+  color: var(--c-ink-muted);
+  margin-top: -0.375rem;
+}
+
+.contact-block__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+  padding-top: var(--sp-md);
+  border-top: 1px solid var(--c-border);
+}
+
+.contact-block__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contact-block__label {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--c-ink-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-block__link {
+  font-size: var(--text-base);
+  color: var(--c-accent);
+  transition: color var(--ease);
+}
+
+.contact-block__link:hover {
+  color: var(--c-accent-dark);
+}
+
 /* ------------------------------------------------------------
    Responsive
    ------------------------------------------------------------ */
