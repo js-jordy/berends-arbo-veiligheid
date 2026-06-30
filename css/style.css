@@ -453,7 +453,6 @@ a:hover {
 
 @media (max-width: 859px) {
   .hero__grid { grid-template-columns: 1fr; }
-  .hero__visual { display: none; }
 }
 
 /* ------------------------------------------------------------
