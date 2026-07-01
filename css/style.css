@@ -564,6 +564,19 @@ a:hover {
 .section--surface { background-color: var(--c-surface); }
 .section--cta     { background-color: var(--c-cta-bg); }
 
+.section--dark {
+  background-color: var(--c-hero-bg);
+}
+.section--dark .section__title {
+  color: rgba(255, 255, 255, 0.92);
+}
+.section--dark .section__title::before {
+  opacity: 0.7;
+}
+.section--dark .section__body p {
+  color: rgba(255, 255, 255, 0.62);
+}
+
 /* Single-column prose column (used for CTA and Aanpak title) */
 .section__inner {
   max-width: var(--prose-w);
