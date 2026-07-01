@@ -576,6 +576,14 @@ a:hover {
 .section--dark .section__body p {
   color: rgba(255, 255, 255, 0.62);
 }
+.section--dark .split--specialist {
+  grid-template-columns: 1.05fr 1fr;
+}
+.section--dark .tech-frame {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
 
 /* Single-column prose column (used for CTA and Aanpak title) */
 .section__inner {
