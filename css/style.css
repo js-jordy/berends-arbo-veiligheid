@@ -982,6 +982,16 @@ a:hover {
    Service detail — "Diensten in detail"
    ------------------------------------------------------------ */
 
+/* Centered section title — mirrors .section--cta .section__inner */
+.services-detail > .container > .section__inner {
+  text-align: center;
+  align-items: center;
+}
+
+.services-detail > .container > .section__inner .section__title::before {
+  margin-inline: auto;
+}
+
 /* Flex column — panels stack with a controlled gap */
 .service-detail {
   display: flex;
@@ -1048,18 +1058,32 @@ a:hover {
 }
 
 .service-detail__link {
-  display: inline;
-  font-size: var(--text-sm);
-  font-weight: var(--fw-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+  margin-top: 1.4rem;
   color: var(--c-accent);
-  border-bottom: 1px solid rgba(42, 106, 170, 0.45);
-  padding-bottom: 2px;
-  transition: color var(--ease), border-color var(--ease);
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+  border-bottom: 1px solid rgba(43, 119, 190, 0.45);
+  background: transparent;
+  padding: 0 0 0.18rem;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    background 180ms ease,
+    padding 180ms ease;
 }
 
 .service-detail__link:hover {
-  color: var(--c-accent-dark);
-  border-bottom-color: var(--c-accent-dark);
+  border-color: var(--c-accent);
+  background: rgba(43, 119, 190, 0.06);
+  padding-inline: 0.45rem;
+  padding-block: 0.18rem;
+  transform: translateX(2px);
 }
 
 /* ------------------------------------------------------------
