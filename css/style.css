@@ -114,27 +114,13 @@ a:hover {
 /* ------------------------------------------------------------
    Header
 
-   Default: opaque, subtle shadow — safe on all inner pages.
-   On the homepage, JS adds .header--has-hero which starts
-   transparent over the dark hero, then .is-scrolled restores
-   the white bar as the user scrolls past it.
+   Default: opaque white bar with subtle shadow on all pages.
    ------------------------------------------------------------ */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
   height: var(--header-h);
-  background-color: var(--c-bg);
-  box-shadow: 0 1px 0 var(--c-border);
-}
-
-.site-header.header--has-hero {
-  background-color: transparent;
-  box-shadow: none;
-  transition: background-color 300ms ease, box-shadow 300ms ease;
-}
-
-.site-header.header--has-hero.is-scrolled {
   background-color: var(--c-bg);
   box-shadow: 0 1px 0 var(--c-border);
 }
@@ -156,6 +142,13 @@ a:hover {
   line-height: 1;
   flex-shrink: 0;
   transition: color var(--ease);
+}
+
+.brand__icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  color: var(--c-ink);
 }
 
 .brand__main {
@@ -185,25 +178,6 @@ a:hover {
   color: var(--c-accent);
 }
 
-/* Transparent hero state: parent still sets transition, children get explicit color */
-.site-header.header--has-hero .brand {
-  color: rgba(255, 255, 255, 0.93);
-  transition: color 300ms ease;
-}
-
-.site-header.header--has-hero .brand__sub {
-  color: var(--c-accent);
-}
-
-/* Scrolled state: restore dark ink on both wrapper and children */
-.site-header.header--has-hero.is-scrolled .brand {
-  color: var(--c-ink);
-}
-
-.site-header.header--has-hero.is-scrolled .brand__main {
-  color: var(--c-ink);
-}
-
 /* Nav toggle */
 .nav-toggle {
   display: flex;
@@ -223,14 +197,6 @@ a:hover {
 
 .nav-toggle:hover { background-color: var(--c-surface); }
 
-.site-header.header--has-hero .nav-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.site-header.header--has-hero.is-scrolled .nav-toggle:hover {
-  background-color: var(--c-surface);
-}
-
 .nav-toggle__bar {
   display: block;
   width: 100%;
@@ -239,14 +205,6 @@ a:hover {
   border-radius: 2px;
   transform-origin: center;
   transition: transform var(--ease), opacity var(--ease), background-color 300ms ease;
-}
-
-.site-header.header--has-hero .nav-toggle__bar {
-  background-color: rgba(255, 255, 255, 0.88);
-}
-
-.site-header.header--has-hero.is-scrolled .nav-toggle__bar {
-  background-color: var(--c-ink);
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
@@ -325,35 +283,6 @@ a:hover {
   .nav-link:hover { color: var(--c-ink); }
 
   .nav-link.active {
-    color: var(--c-ink);
-    border-bottom-color: var(--c-accent);
-  }
-
-  /* Transparent hero state */
-  .site-header.header--has-hero .nav-link {
-    color: rgba(255, 255, 255, 0.72);
-    transition: color 300ms ease, border-color 300ms ease;
-  }
-
-  .site-header.header--has-hero .nav-link:hover {
-    color: rgba(255, 255, 255, 0.96);
-  }
-
-  .site-header.header--has-hero .nav-link.active {
-    color: rgba(255, 255, 255, 0.96);
-    border-bottom-color: rgba(255, 255, 255, 0.38);
-  }
-
-  /* Restored scrolled state */
-  .site-header.header--has-hero.is-scrolled .nav-link {
-    color: var(--c-ink-body);
-  }
-
-  .site-header.header--has-hero.is-scrolled .nav-link:hover {
-    color: var(--c-ink);
-  }
-
-  .site-header.header--has-hero.is-scrolled .nav-link.active {
     color: var(--c-ink);
     border-bottom-color: var(--c-accent);
   }
