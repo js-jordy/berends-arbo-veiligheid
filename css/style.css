@@ -718,6 +718,107 @@ a:hover {
 }
 
 /* ------------------------------------------------------------
+   Ondersteuning — expertise card grid (section 4)
+   ------------------------------------------------------------ */
+#ondersteuning .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+}
+
+.expertise-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.expertise-grid__item {
+  height: 100%;
+  min-width: 0;
+  background-color: rgba(42, 106, 170, 0.035);
+  border: 1px solid rgba(42, 106, 170, 0.18);
+  border-top: 3px solid var(--c-accent);
+  border-radius: 8px;
+  box-shadow:
+    0 2px 8px rgba(42, 106, 170, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+  padding: var(--sp-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition:
+    box-shadow 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.expertise-grid__item:hover {
+  background-color: rgba(42, 106, 170, 0.06);
+  border-color: rgba(42, 106, 170, 0.3);
+  box-shadow:
+    0 6px 20px rgba(42, 106, 170, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.expertise-grid__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-accent);
+  border-radius: 50%;
+  color: white;
+  flex-shrink: 0;
+}
+
+.expertise-grid__icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.expertise-grid__title {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--c-hero-bg);
+  line-height: 1.4;
+  margin-top: 0.25rem;
+  overflow-wrap: break-word;
+}
+
+.expertise-grid__desc {
+  font-size: var(--text-xs);
+  color: var(--c-ink-muted);
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 681px) {
+  .expertise-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .expertise-grid__item {
+    padding: var(--sp-md);
+  }
+
+  .expertise-grid__title {
+    font-size: 0.8125rem;
+    line-height: 1.45;
+  }
+}
+
+/* ------------------------------------------------------------
    CTA section — centered editorial close (section 5)
    ------------------------------------------------------------ */
 .section--cta .section__title::before { display: none; }
@@ -1179,8 +1280,7 @@ a:hover {
   /* Stack all split layouts */
   .split--context,
   .split--context-top,
-  .split--specialist,
-  .split--expertise {
+  .split--specialist {
     grid-template-columns: 1fr;
   }
 
