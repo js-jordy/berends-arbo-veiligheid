@@ -1629,8 +1629,33 @@ a:hover {
 }
 
 @media (max-width: 680px) {
-  .contact-layout {
-    grid-template-columns: 1fr;
+  .contact-page .contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--split-gap);
+  }
+
+  .contact-page .contact-layout__intro {
+    display: contents;
+  }
+
+  .contact-page .contact-layout__intro .section__title {
+    order: 1;
+  }
+
+  .contact-page .contact-layout__intro .section__body {
+    order: 2;
+  }
+
+  .contact-page .contact-card {
+    order: 3;
+    min-width: 0;
+  }
+
+  .contact-page .contact-briefing--inline {
+    order: 4;
+    margin-top: 0;
+    padding: 1.15rem 1.2rem;
   }
 
   .contact-card {
@@ -1646,13 +1671,18 @@ a:hover {
     min-height: 3.25rem;
   }
 
+  .contact-page .contact-method__value {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .contact-page .contact-method--email .contact-method__value {
+    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+  }
+
   .contact-card__whatsapp-link {
     padding: 0.35rem 0;
     min-height: 2.75rem;
-  }
-
-  .contact-page .contact-briefing--inline {
-    padding: 1.15rem 1.2rem;
   }
 }
 
@@ -1682,10 +1712,30 @@ a:hover {
    Responsive
    ------------------------------------------------------------ */
 @media (max-width: 680px) {
+  .header-inner {
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .brand {
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: calc(100% - 48px);
+    gap: 0.5rem;
+  }
+
+  .brand__sub {
+    font-size: 0.8125rem;
+  }
+
   /* Stack all split layouts */
   .split--context,
   .split--context-top,
   .split--specialist {
+    grid-template-columns: 1fr;
+  }
+
+  .section--dark .split--specialist {
     grid-template-columns: 1fr;
   }
 
@@ -1695,6 +1745,17 @@ a:hover {
 
   /* Fixed height for image on mobile so it doesn't stretch too tall */
   .split--specialist .tech-frame { min-height: 220px; max-height: 260px; }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-grid__title,
+  .expertise-grid__desc {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
+  }
 
   /* Hero sub: slightly smaller on mobile */
   .hero__sub { font-size: var(--text-base); }
@@ -1717,9 +1778,31 @@ a:hover {
   }
 
   /* Service detail — stack left/right columns on mobile */
+  .service-detail {
+    min-width: 0;
+  }
+
   .service-detail__item {
     grid-template-columns: 1fr;
     gap: var(--sp-md);
+    min-width: 0;
+    padding: 1.25rem 1.35rem;
+  }
+
+  .service-detail__left,
+  .service-detail__right {
+    min-width: 0;
+  }
+
+  .service-detail__title,
+  .service-detail__context,
+  .service-detail__body {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .service-detail__link {
+    max-width: 100%;
   }
 
   /* About method — stack on mobile */
@@ -1773,6 +1856,13 @@ a:hover {
     border-top: 2px solid var(--c-accent);
     padding-top: var(--sp-md);
     max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand__divider,
+  .brand__sub {
+    display: none;
   }
 }
 
