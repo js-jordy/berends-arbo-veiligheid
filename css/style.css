@@ -955,6 +955,119 @@ a:hover {
   text-transform: uppercase;
 }
 
+/* About method — Expert Lens feature (over-mij.html) */
+.section--about-method {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(43, 119, 190, 0.10), transparent 30%),
+    linear-gradient(180deg, rgba(242, 248, 253, 0.75), rgba(255, 255, 255, 0.96));
+}
+
+.section--about-method .about-method {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--split-gap);
+  align-items: center;
+}
+
+.section--about-method .about-method__content {
+  min-width: 0;
+}
+
+.section--about-method .about-method__lens {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(22, 34, 49, 0.08);
+  border-radius: 2px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 22px 56px rgba(15, 25, 38, 0.08);
+  padding: clamp(2.25rem, 4vw, 3.25rem);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.section--about-method .about-method__lens:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 28px 64px rgba(15, 25, 38, 0.11);
+}
+
+.section--about-method .about-method__lens::before {
+  content: '';
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  right: -7rem;
+  top: -7rem;
+  background: radial-gradient(circle, rgba(43, 119, 190, 0.12), transparent 65%);
+  pointer-events: none;
+}
+
+.section--about-method .about-method__lens::after {
+  content: '';
+  position: absolute;
+  inset: 1.25rem;
+  pointer-events: none;
+  opacity: 0.35;
+  background:
+    linear-gradient(rgba(43, 119, 190, 0.28), rgba(43, 119, 190, 0.28)) top left / 1.15rem 1px no-repeat,
+    linear-gradient(rgba(43, 119, 190, 0.28), rgba(43, 119, 190, 0.28)) top left / 1px 1.15rem no-repeat,
+    linear-gradient(rgba(43, 119, 190, 0.28), rgba(43, 119, 190, 0.28)) bottom right / 1.15rem 1px no-repeat,
+    linear-gradient(rgba(43, 119, 190, 0.28), rgba(43, 119, 190, 0.28)) bottom right / 1px 1.15rem no-repeat;
+}
+
+.section--about-method .about-method__lens .aside-list__title,
+.section--about-method .about-method__lens .aside-list {
+  position: relative;
+  z-index: 1;
+}
+
+.section--about-method .about-method__lens .aside-list__title {
+  margin: 0;
+  padding: 0 0 var(--sp-sm);
+}
+
+.section--about-method .about-method__lens .aside-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.section--about-method .about-method__lens .aside-list li {
+  position: relative;
+  background: transparent;
+  border-radius: 0;
+  padding: 1.15rem 0 1.15rem 1.35rem;
+  border-top: 1px solid rgba(22, 34, 49, 0.08);
+  font-size: var(--text-sm);
+  color: var(--c-ink-body);
+  line-height: 1.55;
+}
+
+.section--about-method .about-method__lens .aside-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.72rem;
+  width: 0.65rem;
+  height: 2px;
+  border: none;
+  border-radius: 1px;
+  background: rgba(43, 119, 190, 0.72);
+  box-shadow: 0 0 6px rgba(43, 119, 190, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section--about-method .about-method__lens {
+    transition: none;
+  }
+
+  .section--about-method .about-method__lens:hover {
+    transform: none;
+  }
+}
+
 /* ------------------------------------------------------------
    Contact details block — contact.html
    ------------------------------------------------------------ */
@@ -1416,6 +1529,27 @@ a:hover {
   .service-detail__item {
     grid-template-columns: 1fr;
     gap: var(--sp-md);
+  }
+
+  /* About method — stack on mobile */
+  .section--about-method .about-method {
+    grid-template-columns: 1fr;
+  }
+
+  .section--about-method .about-method__lens {
+    padding: 1.75rem;
+  }
+
+  .section--about-method .about-method__lens::after {
+    inset: 1rem;
+    opacity: 0.28;
+  }
+
+  .section--about-method .about-method__lens::before {
+    width: 14rem;
+    height: 14rem;
+    right: -5rem;
+    top: -5rem;
   }
 
   /* Profile intro — tighter on mobile */
