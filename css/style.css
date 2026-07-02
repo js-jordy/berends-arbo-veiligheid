@@ -518,6 +518,18 @@ a:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
+.section--dark .working-style {
+  border-left-color: var(--c-accent);
+}
+
+.section--dark .working-style__title {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.section--dark .working-style__body {
+  color: rgba(255, 255, 255, 0.62);
+}
+
 /* Single-column prose column (used for CTA and Aanpak title) */
 .section__inner {
   max-width: var(--prose-w);
@@ -890,8 +902,48 @@ a:hover {
 /* ------------------------------------------------------------
    Aside supporting list — over-mij.html
    ------------------------------------------------------------ */
-.aside-list {
-  border-top: 1px solid var(--c-border);
+.aside-panel {
+  background: #fff;
+  border: 1px solid rgba(22, 34, 49, 0.10);
+  border-radius: 2px;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  box-shadow: 0 20px 50px rgba(15, 25, 38, 0.06);
+}
+
+.aside-panel .aside-list__title {
+  margin: 0;
+  padding: 0 0 var(--sp-sm);
+}
+
+.aside-panel .aside-list {
+  counter-reset: aboutChecklist;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.aside-panel .aside-list li {
+  counter-increment: aboutChecklist;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  align-items: start;
+  background: transparent;
+  border-radius: 0;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(22, 34, 49, 0.10);
+  font-size: var(--text-sm);
+  color: var(--c-ink-body);
+  line-height: 1.55;
+}
+
+.aside-panel .aside-list li::before {
+  content: counter(aboutChecklist, decimal-leading-zero);
+  color: var(--c-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  padding-top: 0.1rem;
 }
 
 .aside-list__title {
@@ -901,15 +953,6 @@ a:hover {
   color: var(--c-ink-muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: var(--sp-sm) 0 var(--sp-xs);
-}
-
-.aside-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--c-border);
-  font-size: var(--text-sm);
-  color: var(--c-ink-body);
-  line-height: 1.55;
 }
 
 /* ------------------------------------------------------------
@@ -1090,8 +1133,82 @@ a:hover {
    Profile intro — over-mij.html
    ------------------------------------------------------------ */
 .profile-intro {
-  background-color: var(--c-surface);
-  padding-block: var(--section-pad);
+  background-color: var(--c-bg);
+  padding-top: var(--section-pad);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.profile-intro__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.profile-intro__content {
+  min-width: 0;
+}
+
+.profile-intro__visual {
+  position: relative;
+  min-height: clamp(360px, 38vw, 420px);
+  border-radius: 2px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.profile-intro__quote {
+  display: flex;
+  align-items: stretch;
+  background: var(--c-ink);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 24px 60px rgba(15, 25, 38, 0.14);
+}
+
+.profile-intro__quote::before {
+  content: '\201C';
+  position: absolute;
+  left: clamp(1.25rem, 2vw, 2rem);
+  top: clamp(1rem, 2vw, 1.35rem);
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.profile-intro__quote-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp-sm);
+  width: 100%;
+  min-height: inherit;
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+  z-index: 1;
+}
+
+.profile-intro__quote-label {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.profile-intro__quote-text {
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.profile-intro__quote-signature {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 0.25rem;
 }
 
 .profile-intro__title {
@@ -1145,6 +1262,17 @@ a:hover {
 .working-style__body {
   color: var(--c-ink-body);
   line-height: var(--lh-base);
+}
+
+.working-style__signature {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--c-ink-muted);
+  margin-top: 0.25rem;
+}
+
+.section--dark .working-style__signature {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* ------------------------------------------------------------
@@ -1291,6 +1419,24 @@ a:hover {
   }
 
   /* Profile intro — tighter on mobile */
+  .profile-intro__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-intro__visual {
+    min-height: auto;
+  }
+
+  .profile-intro__quote::before {
+    left: 1.25rem;
+    top: 1rem;
+    font-size: clamp(3.5rem, 14vw, 5rem);
+  }
+
+  .profile-intro__quote-inner {
+    padding: 1.5rem;
+  }
+
   .profile-intro__body {
     font-size: var(--text-base);
   }
