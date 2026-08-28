@@ -389,9 +389,9 @@ a:hover {
   border: 0;
   outline: 0;
   box-shadow: none;
-  background-image: url('../assets/images/5x beter_Gevaarlijke stoffen_13.jpg');
+  background-image: url('../assets/images/hero-pim-berends-portret.jpg');
   background-size: cover;
-  background-position: 45% top;
+  background-position: 32% top;
   margin-right: clamp(-6rem, -5vw, -3rem);
   transform: translateX(1.5rem);
 }
